@@ -1,0 +1,410 @@
+//* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&family=Montserrat:wght@100;300;500;700;900&family=Viga&display=swap');
+
+
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	
+	}
+body { 
+	font: 70% Montserrat, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	background: linear-gradient(286deg, #3fc3a1, #fcc4a7, #cb9ae9, #f08dd0, #ebf08d);
+	
+	/*background: linear-gradient(331deg, #3fc3a1, #fcc4a7, #a457d2, #f08dd0);*/
+
+	margin: 0; 
+	padding: 0;
+
+
+	}
+
+
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	font:  1.5em Montserrat, sans-serif;
+	line-height: 1.6;
+	}
+
+h3 { 
+	font:  2em Montserrat, sans-serif;
+	font-weight: 700;
+
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: blueviolet;
+	margin-top: 10px;
+	padding-bottom: 20px;
+	padding-top: 50px;
+
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #6D66FF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #9FFFA6;
+	}
+
+abbr {
+	color: white;
+	padding: 5px;
+	font-weight: 700;
+	text-decoration: none;
+	border: 1px solid white;
+  	background-color: hotpink;
+  	animation-name: square;
+  	animation-duration: 20s;
+
+} 
+
+
+@keyframes square {
+  0%   {background-color: hotpink;}
+  25%   {background-color: lightskyblue;}
+  50%  {background-color: lightseagreen;}
+  75%   {background-color: cyan;}
+  100% {background-color: lightpink;}
+}
+
+
+/* specific divs */
+.page-wrapper { 
+	color: #666666;
+    min-width: 420px;
+    padding: 10px;
+    margin: 3%;
+
+
+
+   /*border-style: solid;
+  	border-width: 20px;
+  	border-image-source: url("../img/lines.png");
+  	border-image-slice: 60 30;*/
+
+	background: rgba(255, 255, 255, 0.40);
+	border-radius: 20px 70px 30px 3px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(12.5px);
+	border: 1px solid rgba(255, 255, 255, 0.92);
+
+	}
+
+
+
+
+@media(max-width: 450px) {
+
+	
+	header h1 {
+		font-size: 3.5em;	
+	}
+
+	header h2 {
+		padding-top: 30px;
+		font-size: 2.5em;
+		
+	}
+
+	footer {
+		font-size: 5px;
+		width: 350px;
+
+
+	}
+
+	footer a:link, footer a:visited {
+		padding: .5px;
+
+		
+	}
+
+
+	.summary {
+		width: 420px;
+		margin-top: 10px;
+
+	}
+
+	.preamble {
+	
+	
+	width: 420px;
+	padding-left:2px ;
+ 	padding-right: 2px;
+ 	padding-bottom: 10px;
+  	border-top: 2px solid cyan;
+  	border-left: 2px dashed lightyellow;
+  	border-right: 2px dashed lightgreen;
+
+	}
+
+
+
+.supporting {	
+
+	width: 420px;
+	padding-left:2px ;
+ 	padding-right: 2px;
+ 	padding-top: 13px;
+  	border-left: 2px dashed lightyellow;
+  	border-right: 2px dashed lightgreen;
+    
+	}
+	.sidebar{
+		
+		width: 80%;
+
+	}
+
+
+	.sidebar li {
+		
+		font-size: 1em;
+
+	}
+
+
+}
+
+
+@media(max-width: 800px) {
+
+		header h1 {
+		font-size: 4em;
+
+		
+	}
+	header h2{
+		padding-top: 20px;
+		font-size: 3em;
+		
+	}
+
+}
+
+
+
+
+header {
+	
+	color: white;
+	font: Montserrat, sans-serif;
+	font-weight: 700;
+	padding-top: 80px;
+	padding-bottom: 50px;
+	max-width: 1000px;
+	min-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;   
+    
+
+}
+
+h1 { 
+	
+	margin-top: 10px;
+	font-weight: 700;
+	font-size: 5.5em;
+	position: absolute;
+  	height: 100px;
+  	animation-name: movement;
+  	animation-duration: 8s;
+  	border-radius: 10px;
+
+}
+
+@keyframes movement {
+
+  0%   {background-color:lightpink; left:0px; top:0px;}
+  25%  {background-color:cyan; left:180px; top:0px;}
+  50%  {background-color:springgreen; left:180px; top:200px;}
+  75%  {background-color:hotpink; left:0px; top:300px;}
+  100% {background-color:lightsteelblue; left:0px; top:0px;}
+}
+
+
+h2 { 
+
+	font-weight: 500;
+	font-size: 3em;
+	margin-top: 120px;
+	position: absolute;
+	text-decoration: 2px underline;
+	
+	
+	}
+
+header {
+	height: 35vh;
+}
+
+.summary {
+	padding-top: 20px;	
+	padding-bottom: 50px;	
+	clear: both;
+	font-size: 1.5em;
+	max-width: 1000px;
+	
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    width: 100%;
+    text-align: left;
+
+}
+
+.summary p {
+	
+	font-size: 1em;
+	max-width: 1000px;
+
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    text-align: left;
+	
+	}
+
+
+.preamble {
+	
+	max-width: 1000px;
+	
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    text-align: left;
+ 	padding-left:20px ;
+ 	padding-right: 20px;
+ 	padding-bottom: 10px;
+   	background-color: black;
+  	color:lightpink;
+  	border-top: 10px solid cyan;
+  	border-left: 10px dashed lightyellow;
+  	border-right: 10px dashed lightgreen;
+
+	}
+
+
+
+.supporting {	
+
+	max-width: 1000px;
+	
+    margin-right: auto;
+    margin-left: auto;
+    background-color: black;
+    color: lightpink;
+    width: 80%;
+    text-align: left;
+    padding-left:20px ;
+ 	padding-right: 20px;
+ 	/*border-bottom: 10px solid cyan;*/
+  	border-left: 10px dashed lightyellow;
+  	border-right: 10px dashed lightgreen;
+  	position: relative;
+  	padding-top: 5px;
+    
+	}
+
+
+footer { 
+
+
+	text-align: center; 
+	font-weight: 400;
+	
+	background-color: #FFF8BB;
+	height: 7em;
+
+
+	}
+
+
+footer a:link, footer a:visited { 
+	margin-right: 30px; 
+	color: hotpink;
+	font-family: Viga, sans-serif ;
+	font-size: 2em;
+	line-height: 3.5em;
+
+
+	}
+
+
+
+.sidebar .wrapper { 
+	font: 1.5em Montserrat, sans-serif ; 
+	padding: 5px; 
+	margin-bottom: 30px;
+	max-width: 1000px;
+	min-width: px;
+	width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: white;
+
+	}
+
+.sidebar h3{
+	font-size: 2em;
+	color: white;
+}
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	margin-right: 50px;
+
+	}
+.sidebar li {
+	
+	line-height: 1em; 
+	border: 2px solid #FFB39F;
+	border-radius: 5px;
+	display: block; 
+	padding: 8px; 
+	margin-bottom: 5px;
+	list-style-type: none;
+
+	}
+	
+.sidebar li a:link {
+	color: #6D66FF;
+	font-weight: 700;
+	
+	}
+.sidebar li a:visited {
+	color: hotpink;
+	}
+
+
+
