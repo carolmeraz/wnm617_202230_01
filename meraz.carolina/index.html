@@ -16,9 +16,16 @@
 	<script src="js/app.js"></script>
 
 
+
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;1,400&display=swap');
+</style>
+
+
 </head>
 <body>
 
+<!-- Signin page-->
 	<section data-role="page" id="signin-page">
 		<div data-role="main">
 			<form id="signin-form" class="form">
@@ -34,12 +41,14 @@
 				<div class="form-control">
 					<a href="#recent-page" class="form-button">Submit</a>
 				</div>
-	</form>
+			</form>
 			
 		</div>
 	</section>
 
 
+
+	<!-- Map/recent page-->
 	<section data-role="page" id="recent-page">
 		<div data-role="main">Map</div>
 		<footer data-role="footer">
@@ -51,12 +60,15 @@
 		</footer>
 	</section>
 
+	<!-- Animals list page-->
+
+
 	<section data-role="page" id="list-page">
 		<header data-role="header">
 			<h1>Animal List</h1>
 			<ul>
 				<li class="flex-stretch"></li>
-				<li><a href="#">Add</li>
+				<a href="#add-cat-page">Add</a>
 			</ul>
 		</header>
 		<div data-role="main">
@@ -81,10 +93,77 @@
 		</footer>
 	</section>
 
-	<section data-role="page" id="user-profile-page">
+
+<!-- Animal profile page-->
+
+<section data-role="page" id="animal-profile-page">
+		<header data-role="header">
+			<h1>Animal Profile</h1>
+			<ul>
+				<li><a href="#" data-rel="back">Back</a></li>
+				<li class="flex-stretch"></li>
+				<li><a href="#animal-edit-page">Edit</a></li>
+			</ul>
+		</header>
+
 		<div data-role="main">
-			User Profile
+			
+			
 		</div>
+
+		<footer data-role="footer">
+			<ul>
+				<li><a href="#recent-page">Recent</a></li>
+				<li><a href="#list-page">List</a></li>
+				<li><a href="#user-profile-page">Profile</a></li>
+			</ul>
+		</footer>
+</section>
+
+
+
+<!-- Animal Edit Profile -->
+<section data-role="page" id="animal-edit-page">
+		<header data-role="header">
+			<h1>Edit Profile</h1>
+			<ul>
+				<li><a href="#" data-rel="back">Back</a></li>
+				<li class="flex-stretch"></li>
+				<li><a href="#list-page">Save</a></li>
+			</ul>
+
+		</header>
+		<div data-role="main">
+			Form
+
+
+			<form id="edit-animal-form" class="form">
+				<div class="form-control">
+					<label for="edit-cat-page" class="form-label">New Cat Name</label>
+					<input type="text" id="edit--cat-name" data-role="none" class="form-input" placeholder="Type New Cat Name">
+				</div>
+				<div class="form-control">
+					<label for="edit-cat-age-page" class="form-label">New Cat Age</label>
+					<input type="text" id="edit-cat-age" data-role="none" class="form-input" placeholder="Type New cat Age">
+				</div>
+
+				<div class="form-control">
+					<label for="edit-spay-neuter-page" class="form-label">Spay or Neuter</label>
+					<input type="text" id="edit-spay-neuter" data-role="none" class="form-input" placeholder="Type Yes or No">
+				</div>
+
+				<div class="form-control">
+					<label for="edit-cat-description-page" class="form-label">New Description</label>
+					<input type="text" id="edit-cat-description" data-role="none" class="form-input" placeholder="Type New Description">
+				</div>
+
+			</form>
+
+
+		</div>
+	
+
+		
 		<footer data-role="footer">
 			<ul>
 				<li> <a href="#recent-page">Recent</a></li>
@@ -93,6 +172,129 @@
 			</ul>
 		</footer>
 	</section>
+
+
+
+
+
+
+
+	<!-- Animal Add page-->
+
+
+<section data-role="page" id="add-cat-page">
+		<header data-role="header">
+			<h1>Add Cat</h1>
+			<ul>
+				<li><a href="#" data-rel="back">Back</a></li>
+				<li class="flex-stretch"></li>
+				<li><a href="#list-page">Save</a></li>
+			</ul>
+
+		</header>
+		<div data-role="main">
+			Form
+
+
+			<form id="add-cat-form" class="form">
+				<div class="form-control">
+					<label for="cat-name" class="form-label">Cat Name</label>
+					<input type="text" id="add-cat-name" data-role="none" class="form-input" placeholder="Type Cat Name">
+				</div>
+				<div class="form-control">
+					<label for="cat-age" class="form-label">Age</label>
+					<input type="text" id="add-cat-age-" data-role="none" class="form-input" placeholder="Type Cat's Age">
+				</div>
+
+				<div class="form-control">
+					<label for="spay-neuter" class="form-label">Spay and Neuter</label>
+					<input type="text" id="add-spay-neuter" data-role="none" class="form-input" placeholder="Type Yes or No">
+				</div>
+
+				<div class="form-control">
+					<label for="cat-description" class="form-label">Description</label>
+					<input type="text" id="add-cat-description-" data-role="none" class="form-input" placeholder="Type Description">
+				</div>
+
+			</form>
+
+
+
+		</div>
+	
+		<footer data-role="footer">
+			<ul>
+				<li> <a href="#recent-page">Recent</a></li>
+				<li> <a href="#list-page">List</a></li>
+				<li> <a href="#user-profile-page">Profile</a></li>
+			</ul>
+		</footer>
+	</section>
+
+
+	<!-- User page-->
+	<section data-role="page" id="user-profile-page">
+		<header data-role="main">
+			User Profile
+			<a href="#user-edit-page">Edit</a>
+		</header>
+		<footer data-role="footer">
+			<ul>
+				<li><a href="#recent-page">Recent</a></li>
+				<li><a href="#list-page">List</a></li>
+				<li><a href="#user-profile-page">Profile</a></li>
+			</ul>
+		</footer>
+	</section>
+
+	<!-- User Edit page-->
+
+	<section data-role="page" id="user-edit-page">
+		<header data-role="header">
+			<h1>Edit Profile</h1>
+			<ul>
+				<li><a href="#" data-rel="back">Back</a></li>
+				<li class="flex-stretch"></li>
+				<li><a href="#list-page">Save</a></li>
+			</ul>
+
+		</header>
+		<div data-role="main">
+			Form
+
+
+			<form id="edit-name-form" class="form">
+				<div class="form-control">
+					<label for="edit-name-page" class="form-label">New Name</label>
+					<input type="text" id="edit-name" data-role="none" class="form-input" placeholder="Type New Name">
+				</div>
+				<div class="form-control">
+					<label for="edit-username-page" class="form-label">New Username</label>
+					<input type="text" id="edit-username" data-role="none" class="form-input" placeholder="Type New Username">
+				</div>
+
+				<div class="form-control">
+					<label for="edit-password-page" class="form-label">New Password</label>
+					<input type="text" id="edit-password" data-role="none" class="form-input" placeholder="Type New Password">
+				</div>
+			</form>
+
+
+		</div>
+	
+
+		
+		<footer data-role="footer">
+			<ul>
+				<li> <a href="#recent-page">Recent</a></li>
+				<li> <a href="#list-page">List</a></li>
+				<li> <a href="#user-profile-page">Profile</a></li>
+			</ul>
+		</footer>
+	</section>
+
+
+
 	
 </body>
 </html>

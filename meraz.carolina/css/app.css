@@ -1,16 +1,22 @@
 
 /* CSS RESET */
 
+
+
+
+
 *, *::after, *::before {
 	box-sizing: border-box;
 }
 
 :root {
-	--font-sans: Helvetica, Arial, sans-serif;
+	--font-sans: 'Poppins', Arial, sans-serif;
 
-	--color-neutral-light:  pink;
-	--color-neutral-medium:  blue;
-	--color-neutral-dark:  black;
+	--color-neutral-light:  #e6f2f2;
+	--color-neutral-medium:  #d0e7e4;
+	--color-neutral-dark:  #2f8285;
+	--color-neutral-darkest:  #333333;
+
 
 	--header-height:  3rem;
 }
@@ -24,12 +30,13 @@ body {
 
 h1,h2,h3 {
 	font-size:  1em;
+	font-weight: 500;
 	font-family: var(--font-sans);
 }
 
 a {
 	color: inherit;
-	font-weight: bold;
+	font-weight: 500;
 	text-decoration: none;
 
 }
@@ -68,7 +75,7 @@ a:hover {
 
 .ui-mobile .form-label {
 	font-size: 0.8em;
-	color: var(--color-neutral-light);
+	color: var(--color-neutral-darkest);
 	margin: 0.5rem 0;
 
 }
@@ -77,8 +84,9 @@ a:hover {
 	display: inline-block;
 	width: 100%;
 	border-width: 0;
-	background-color: var(--color-neutral-medium);
+	background-color: var(--color-neutral-light);
 	font: inherit;
+	font-weight: 300;
 	padding: 0.5em 1em;
 	margin: 0;
 	outline: 0;
@@ -89,8 +97,10 @@ a:hover {
 	display: inline-block;
 	width: 100%;
 	border-width: 0;
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-neutral-darkest);
+	color: white;
 	font: inherit;
+	font-weight: 500;
 	padding: 0.5em 1em;
 	margin: 0;
 	outline: 0;
@@ -99,12 +109,16 @@ a:hover {
 
 }
 
-#signin-form {
+#signin-form,
+#add-cat-form,
+#edit-animal-form,
+#edit-name-form {
 	padding: 1em;
 }
 
 
-/*Page layout*/
+
+/*Page layouts*/
 
 .ui-mobile .ui-page-active {
 	display: flex;
@@ -121,17 +135,20 @@ a:hover {
 [data-role="main"] {
 	flex: 1 1 100%;
 	overflow: hidden;
-	position: relative;
+	position: relative; /*scrolls on its own space*/
 }
 
-.ui.header,
+.ui-header,
 .ui-footer {
 	flex: none;
 	height: var(--header-height);
 	line-height: var(--header-height);
 	border-width: 0;
-	background-color: lightskyblue;
+	background-color: var(--color-neutral-darkest);
+	color: white;
 	box-shadow: 0 0 5px rgba(0,0,0,0.15);
+	
+	/*set and position child..content inside*/
 	position: relative;
 	overflow: hidden;
 }
