@@ -14,6 +14,7 @@
 	<script src="lib/js/jquery-2.2.4.min.js"></script>
 	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/signin.js"></script>
 
 
 
@@ -26,31 +27,91 @@
 <body>
 
 <!-- Signin page-->
-	<section data-role="page" id="signin-page">
-		<div data-role="main">
-			<form id="signin-form" class="form">
+	<section data-role="page" id="signin-page" class="signin-background-color">
+		<div data-role="main" class="display-flex flex-column">
+			<div class="flex-stretch"></div>
+			<div style="text-align:center;margin-bottom:10vmin">
+				<img src="img/cat-logo.png" alt="cat" style="width:45vmin; height: 45vmin">
+				
+				<div class="logo-text" style="margin-top: 15px;">Whiskers</div>
+			</div>
+			<form id="signin-form" class="form" data-ajax="false">
 				<div class="form-control">
 					<label for="signin-username" class="form-label">Username</label>
-					<input type="text" id="signin-name" data-role="none" class="form-input" placeholder="Type your Username">
+					<input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Type your Username">
 				</div>
 				<div class="form-control">
 					<label for="signin-password" class="form-label">Password</label>
-					<input type="text" id="signin-password" data-role="none" class="form-input" placeholder="Type your Password">
+					<input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Type your Password">
 				</div>
 			<!--<input type="submit" data-role="none"> -->
 				<div class="form-control">
-					<a href="#recent-page" class="form-button">Submit</a>
+					
+					<button type="submit" class="form-button" data-role="none">Submit</button>
+				</div>
+				<div class="form-control" style="text-align: center;font-size: 0.8em;">
+					<p>New to the app? <a href="#signup-page">Sign Up</a></p>
 				</div>
 			</form>
+			<!-- makes form go up<div class="flex-stretch"></div> -->
 			
 		</div>
 	</section>
 
 
 
+<!-- SignUp page-->
+<section data-role="page" id="signup-page" class="signin-background-color">
+		<div data-role="main" class="display-flex flex-column">
+			<div class="flex-stretch"></div>
+			<div style="text-align:center;margin-bottom:10vmin;">
+				<img src="img/cat-logo.png" alt="cat" style="width:45vmin; height: 45vmin;">
+				
+				<div class="logo-text" style="margin-top: 15px;">Whiskers</div>
+			</div>
+			<form id="signup-form" class="form" data-ajax="false">
+				<div class="form-control">
+					<label for="signup-username" class="form-label">Username</label>
+					<input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type your Username">
+				</div>
+				<div class="form-control">
+					<label for="signup-password" class="form-label">Password</label>
+					<input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type your Password">
+				</div>
+
+				<div class="form-control">
+					<label for="signup-password2" class="form-label">Confirm Password</label>
+					<input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Confirm your Password">
+				</div>
+			<!--<input type="submit" data-role="none"> -->
+				<div class="form-control">
+					<a href="#recent-page" class="form-button">Sign Up</a>
+				</div>
+					
+				<div class="form-control" style="text-align: center;font-size: 0.8em;">
+					<p>Already have an account? <a href="#signin-page">Sign In</a></p>
+				</div>
+			</form>
+			<!-- makes form go up<div class="flex-stretch"></div> -->
+			
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- Map/recent page-->
 	<section data-role="page" id="recent-page">
-		<div data-role="main">Map</div>
+		<div data-role="main" class="map-placeholder">Map</div>
 		<footer data-role="footer">
 			<ul>
 				<li> <a href="#recent-page">Recent</a></li>
@@ -71,7 +132,7 @@
 				<a href="#add-cat-page">Add</a>
 			</ul>
 		</header>
-		<div data-role="main">
+		<div data-role="main" class="overscroll">
 			<ul>
 				<li><a href="#animal-profile-page">Cat 1</a></li>
 				<li><a href="#animal-profile-page">Cat 2</a></li>
@@ -107,7 +168,7 @@
 		</header>
 
 		<div data-role="main">
-			
+
 			
 		</div>
 
@@ -207,7 +268,7 @@
 				</div>
 
 				<div class="form-control">
-					<label for="spay-neuter" class="form-label">Spay and Neuter</label>
+					<label for="spay-neuter" class="form-label">Spay or Neuter</label>
 					<input type="text" id="add-spay-neuter" data-role="none" class="form-input" placeholder="Type Yes or No">
 				</div>
 
@@ -236,7 +297,10 @@
 	<section data-role="page" id="user-profile-page">
 		<header data-role="main">
 			User Profile
+			<br>
 			<a href="#user-edit-page">Edit</a>
+			<br>
+			<a href="#" class="js-logout">Logout</a>
 		</header>
 		<footer data-role="footer">
 			<ul>

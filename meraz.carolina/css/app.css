@@ -28,6 +28,18 @@ body {
 
 }
 
+
+.signin-background-color {
+	background-color: #FFF3F7;
+}
+
+
+
+.logo-text {
+	font-weight: 300;
+	font-size: 2em;
+	letter-spacing: 1px;
+}
 h1,h2,h3 {
 	font-size:  1em;
 	font-weight: 500;
@@ -61,6 +73,7 @@ a:hover {
 .flex-justify-center { justify-content: center; }
 
 .flex-column { flex-direction: column; }
+/*.overscroll { overflow:auto; } to scroll*/
 
 
 
@@ -71,12 +84,14 @@ a:hover {
 	margin: 1em 0;
 
 
+
 }
 
 .ui-mobile .form-label {
 	font-size: 0.8em;
 	color: var(--color-neutral-darkest);
-	margin: 0.5rem 0;
+	margin: 0.5rem 0.8rem;
+
 
 }
 
@@ -90,6 +105,7 @@ a:hover {
 	padding: 0.5em 1em;
 	margin: 0;
 	outline: 0;
+	border-radius: 30px;
 
 }
 
@@ -106,10 +122,12 @@ a:hover {
 	outline: 0;
 	text-align: center;
 	text-decoration: none;
+	border-radius: 30px;
 
 }
 
 #signin-form,
+#signup-form,
 #add-cat-form,
 #edit-animal-form,
 #edit-name-form {
@@ -186,6 +204,12 @@ a:hover {
 
 }
 
+
+.map-placeholder {
+	background-image: url(../img/map.png);
+	background-position: center;
+	background-size: cover;
+}
 
 
 
