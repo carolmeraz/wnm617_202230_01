@@ -12,13 +12,20 @@
 :root {
 	--font-sans: 'Poppins', Arial, sans-serif;
 
-	--color-neutral-light:  #e6f2f2;
-	--color-neutral-medium:  #d0e7e4;
-	--color-neutral-dark:  #2f8285;
-	--color-neutral-darkest:  #333333;
+	--color-neutral-light:  #F2F2F2;
+	--color-neutral-darkest:  #062830;
+
+	--color-middle-light: #B3B3B3 ;
+	--color-middle-dark: #FBB568;
+
+
+	--color-main-light: #F4F2E9;
+	--color-main-dark: #D0CEC2;
+
 
 
 	--header-height:  3rem;
+
 }
 
 body {
@@ -30,15 +37,17 @@ body {
 
 
 .signin-background-color {
-	background-color: #FFF3F7;
+	background-color: #D0CEC2;
 }
 
 
 
 .logo-text {
-	font-weight: 300;
-	font-size: 2em;
+	font-family: 'Nunito', 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 2.3em;
 	letter-spacing: 1px;
+	color: var(--color-neutral-darkest);
 }
 h1,h2,h3 {
 	font-size:  1em;
@@ -73,8 +82,7 @@ a:hover {
 .flex-justify-center { justify-content: center; }
 
 .flex-column { flex-direction: column; }
-/*.overscroll { overflow:auto; } to scroll*/
-
+/*.overscroll { overflow:auto; } */
 
 
 /* FOrms */
@@ -98,8 +106,9 @@ a:hover {
 .form-input {
 	display: inline-block;
 	width: 100%;
-	border-width: 0;
+	border-width: 0px;
 	background-color: var(--color-neutral-light);
+	
 	font: inherit;
 	font-weight: 300;
 	padding: 0.5em 1em;
@@ -128,6 +137,7 @@ a:hover {
 
 #signin-form,
 #signup-form,
+
 #add-cat-form,
 #edit-animal-form,
 #edit-name-form {
@@ -159,11 +169,11 @@ a:hover {
 .ui-header,
 .ui-footer {
 	flex: none;
-	height: var(--header-height);
-	line-height: var(--header-height);
+	height: 3.5rem;
+	line-height: 3.5rem;
 	border-width: 0;
-	background-color: var(--color-neutral-darkest);
-	color: white;
+	background-color: var(--color-main-light);
+	color: var(--color-neutral-darkest);
 	box-shadow: 0 0 5px rgba(0,0,0,0.15);
 	
 	/*set and position child..content inside*/
@@ -213,6 +223,29 @@ a:hover {
 
 
 
+/*CATS list*/
+
+.cats-grid {
+
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  padding: 1em;
+  
+  
+}
+
+.cat-info {
+ 
+  padding: 10px;
+  font-size: 1em;
+  text-align: center;
+
+  
+}
+
+.cat-info img {
+	width:150px; height: 150px;"
+}
 
 
 
@@ -220,11 +253,104 @@ a:hover {
 
 
 
+/*foooter nav*/
+
+.nav-icon-set li.active {
+	background-color: var(--color-main-dark);
+}
+.nav-icon {
+	line-height: 2.3rem;
+	display: block;
+
+}
+
+.nav-icon .icon {
+	vertical-align: middle;
+	width: 1.5em;
+	
+}
+
+.nav-icon-label {
+	line-height: 1.2rem;
+	display: block;
+	font-size: 0.8em;
+
+}
 
 
 
 
+/*User*/
 
+
+
+.title-user {
+	font-weight: 300;
+	color:  var(--color-middle-light);
+	font-size: .8em;
+	letter-spacing: 1px;
+	
+}
+.user-info {
+	font-weight: 400;
+	font-size: 1em;
+	padding-bottom: 10px;
+	border-bottom: 1px solid  var(--color-middle-light) ;
+}
+
+.profile-name {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 2em;
+	letter-spacing: 1px;
+	color: var(--color-neutral-darkest);
+}
+
+.edit-profile{
+	color: #FBB568;
+}
+
+.user-page{
+	padding: 1em;
+}
+
+
+.js-logout {
+	
+	color: var(--color-middle-dark);
+}
+
+
+
+
+/*photos for cat add, cat edit*/
+.photo-profiles{
+	text-align:center;
+	margin-top:10vmin;
+	margin-bottom:5vmin;
+
+	
+}
+
+
+.title-cat {
+	font-weight: 300;
+	color:  var(--color-middle-light);
+	font-size: .8em;
+	letter-spacing: 1px;
+	
+}
+.info-cat {
+	font-weight: 400;
+	font-size: 1em;
+	padding-bottom: 10px;
+	border-bottom: 1px solid  var(--color-middle-light) ;
+}
+
+.cat-page {
+	padding: 1em;
+}
+}
 
 
 
