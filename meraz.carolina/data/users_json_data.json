@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Guerra Cortez",
+    "username": "user1",
+    "age": 35,
+    "favoriteCat": "juliette",
+    "email": "user1@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/746/ff/?text=user1",
+    "date_create": "2022-01-20 03:37:54"
+  },
+  {
+    "id": 2,
+    "name": "Chang Bishop",
+    "username": "user2",
+    "age": 19,
+    "favoriteCat": "prada",
+    "email": "user2@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/773/ff/?text=user2",
+    "date_create": "2022-01-30 08:15:25"
+  },
+  {
+    "id": 3,
+    "name": "Bailey Gamble",
+    "username": "user3",
+    "age": 22,
+    "favoriteCat": "koromon",
+    "email": "user3@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/898/ff/?text=user3",
+    "date_create": "2022-02-18 08:48:51"
+  },
+  {
+    "id": 4,
+    "name": "Iris Forbes",
+    "username": "user4",
+    "age": 37,
+    "favoriteCat": "barbie",
+    "email": "user4@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/925/ff/?text=user4",
+    "date_create": "2022-01-13 08:11:40"
+  },
+  {
+    "id": 5,
+    "name": "Roxie Pollard",
+    "username": "user5",
+    "age": 47,
+    "favoriteCat": "prada",
+    "email": "user5@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/775/ff/?text=user5",
+    "date_create": "2022-04-06 08:15:37"
+  },
+  {
+    "id": 6,
+    "name": "Evans Massey",
+    "username": "user6",
+    "age": 50,
+    "favoriteCat": "juliette",
+    "email": "user6@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/886/ff/?text=user6",
+    "date_create": "2022-03-29 05:58:41"
+  },
+  {
+    "id": 7,
+    "name": "Collier Klein",
+    "username": "user7",
+    "age": 26,
+    "favoriteCat": "juliette",
+    "email": "user7@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/774/ff/?text=user7",
+    "date_create": "2022-03-19 03:57:16"
+  },
+  {
+    "id": 8,
+    "name": "Amelia Leon",
+    "username": "user8",
+    "age": 43,
+    "favoriteCat": "summer",
+    "email": "user8@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/721/ff/?text=user8",
+    "date_create": "2022-03-16 11:11:36"
+  },
+  {
+    "id": 9,
+    "name": "Henrietta Boyer",
+    "username": "user9",
+    "age": 33,
+    "favoriteCat": "barbie",
+    "email": "user9@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/768/ff/?text=user9",
+    "date_create": "2022-01-22 01:18:33"
+  },
+  {
+    "id": 10,
+    "name": "Hart Swanson",
+    "username": "user10",
+    "age": 37,
+    "favoriteCat": "artemis",
+    "email": "user10@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/989/ff/?text=user10",
+    "date_create": "2022-01-08 02:00:47"
+  }
+]
