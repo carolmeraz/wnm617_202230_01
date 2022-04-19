@@ -283,7 +283,12 @@ a:hover {
 /*User*/
 
 
-
+.img-user img{
+	margin-top: 4rem;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
 .title-user {
 	font-weight: 300;
 	color:  var(--color-middle-light);
@@ -301,7 +306,7 @@ a:hover {
 .profile-name {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
-	font-size: 2em;
+	font-size: 1.7em;
 	letter-spacing: 1px;
 	color: var(--color-neutral-darkest);
 }
@@ -320,10 +325,36 @@ a:hover {
 	color: var(--color-middle-dark);
 }
 
+/*animal list CSS*/
+
+.animal-list-image img{
+	
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+}
+
+.animal-list-name {
+	padding-bottom: 10px;
+	color: var(--color-neutral-darkest);
+	font-weight: 300;
+}
+
+
 
 
 
 /*photos for cat add, cat edit*/
+
+.img-cat img{
+	margin-top: 3.8rem;
+	border-radius: 50%;
+	width: 180px;
+	height: 180px;
+	
+}
+
 .photo-profiles{
 	text-align:center;
 	margin-top:10vmin;
@@ -350,11 +381,51 @@ a:hover {
 .cat-page {
 	padding: 1em;
 }
+.animal-profile-nav {
+	height: var(--header-height);
+	line-height: var(--header-height);
+	display: flex;
+}
+
+.animal-profile-nav div {
+	text-align: center;
+	flex: 1 1 auto;
+}
+
+
+.animal-profile-nav {
+	height: var(--header-height);
+	line-height: var(--header-height);
+	display: flex;
+}
+
+.animal-profile-nav div {
+	text-align: center;
+	flex: 1 1 auto;
+}
+
+
+.material-icons {
+	text-align: center;
+	font-size:24px;
+	color:var(--color-neutral-darkest);
 }
 
 
 
 
+
+/*
+.animal-profile-bottom div {
+	opacity: 0;
+	pointer-events: none;
+	transition:  all 0.3s;
+	position:  absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+} */
 
 
 

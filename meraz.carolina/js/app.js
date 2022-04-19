@@ -3,8 +3,22 @@
 $(() => {
    checkUserId();
 
-   // EVENT DELEGATION
-   $(document)
+    // EVENT DELEGATION
+    $(document)
+
+   .on("pagecontainerbeforeshow", function(event, ui){
+      console.log(ui.toPage[0].id)
+
+
+      // PAGE ROUTING -linked to "pages.js"
+      switch(ui.toPage[0].id) {
+         case "recent-page": RecentPage(); break;
+         case "list-page": ListPage(); break;
+         case "user-profile-page": UserProfilePage(); break;
+         case "animal-profile-page": AnimalProfilePage(); break;
+      }
+   })
+
 
    // FORM SUBMISSIONS
    .on("submit", "#signin-form", function(e) {
@@ -13,11 +27,24 @@ $(() => {
    })
 
 
+
    // CLICKS
    .on("click", ".js-logout", function() {
       sessionStorage.removeItem("userId");
       checkUserId();
    })
+
+
+   .on("click", ".js-animal-jump", function(e) {
+      try {
+         e.preventDefault();
+         sessionStorage.animalId = $(this).data('id');
+         $.mobile.navigate("#animal-profile-page");
+      } catch(e) {
+         throw("No id detected")
+      }
+   })
+
 
 
    // ACTIVATE TOOLS

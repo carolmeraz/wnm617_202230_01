@@ -11,12 +11,21 @@
 	<link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
 	<link rel="stylesheet" href="css/app.css">
 
+
+<!-- libraries come before files -->
 	<script src="lib/js/jquery-2.2.4.min.js"></script>
-	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+	
 	<script src="js/app.js"></script>
 	<script src="js/signin.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="js/pages.js"></script>
+	<script src="js/parts.js"></script>
+
+<!-- this library wants to be after files -->
+	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,500&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;1,400&display=swap');
@@ -157,22 +166,7 @@
 				</div>
 			</form>
 		<div data-role="main" style="overflow: auto;">
-
-			
-			<div class="cats-grid">
-				  <div class="cat-info"><a href="#animal-profile-page-barbie"><img src="img/cat-map-barbie.png" alt="cat" >Barbie</a></div>
-				  <div class="cat-info"><a href="#animal-profile-page-figi"><img src="img/cat-map-black.png" alt="cat">Figi</a></div>
-				  <div class="cat-info"><a href="#animal-profile-page-artemis"><img src="img/cat-map-artemis.png" alt="cat" >Artemis</a></div>
-				  <div class="cat-info"><a href="#animal-profile-page-juliette"><img src="img/cat-map-black-white.png" alt="cat" >Juliette</a></div>
-
-				  <div class="cat-info"><a href="#animal-profile-page"><img src="img/cat-map-brown.png" alt="cat" >Strawberry</a></div>
-				  <div class="cat-info"><a href="#animal-profile-page"><img src="img/cat-map.png" alt="cat" >Summer</a></div>
-				  <div class="cat-info"><a href="#animal-profile-page"><img src="img/cat-map.png" alt="cat" >Tiffany</a></div>
-				  <div class="cat-info"><a href="#animal-profile-page"><img src="img/cat-map.png" alt="cat" >Cotton</a></div>
-
- 
-			</div>
-			
+			<ul class="animal-list"></ul>			
 		</div>
 
 		<footer data-role="footer" data-template="#footer-template"></footer>
@@ -197,206 +191,15 @@
 		</header>
 
 		<div data-role="main" style="overflow: auto;">
-
-
-
-			
+			<div class="animal-profile-description"></div>
 		</div>
+		 <div class="animal-profile-nav">
+            <div class="active">Locations</div>
+            <div>About</div>
+         </div>
  
 		<footer data-role="footer" data-template="#footer-template"></footer>
 </section>
-
-
-
-
-<!-- Animal profile page for FAKE PROFILES BARBIE-->
-
-<section data-role="page" id="animal-profile-page-barbie">
-		<header data-role="header">
-			<h1>Cat's Profile</h1>
-			<ul>
-				<li><a href="#" data-rel="back">Back</a></li>
-				<li class="flex-stretch"></li>
-				<li><a href="#animal-edit-page">Edit</a></li>
-			</ul>
-		</header>
-
-		<div class="photo-profiles">
-						<img src="img/cat-map-barbie.png" alt="">
-							<div class="edit-profile"><a href="#" style="text-align: center">Edit Photo</a></div>
-					</div>
-
-		<div data-role="main" class="display-flex flex-column" style="overflow: auto;">
-
-
-			<form class="cat-page">
-			<p class="title-cat">NAME</p>
-			<p class="info-cat">Barbie</p>
-
-			<p class="title-cat">Age</p>
-			<p class="info-cat">8 years-old</p>
-			
-			
-			<p class="title-cat">Spay or Neuter</p>
-			<p class="info-cat">Spay</p>
-
-			<p class="title-cat">Description</p>
-			<p class="info-cat">Had 4 kittens in January 2022</p>
-
-			
-			
-		</form>
-
-		
-		<div class="cat-map-location"><img src="img/cat-map-location.png"></div>
-			
-		</div>
- 
-		<footer data-role="footer" data-template="#footer-template"></footer>
-</section>
-
-
-<!-- Animal profile page for FAKE PROFILE for FIGI-->
-
-<section data-role="page" id="animal-profile-page-figi">
-		<header data-role="header">
-			<h1>Cat's Profile</h1>
-			<ul>
-				<li><a href="#" data-rel="back">Back</a></li>
-				<li class="flex-stretch"></li>
-				<li><a href="#animal-edit-page">Edit</a></li>
-			</ul>
-		</header>
-
-		<div class="photo-profiles">
-						<img src="img/cat-map-black.png" alt="">
-							<div class="edit-profile"><a href="#" style="text-align: center">Edit Photo</a></div>
-					</div>
-
-		<div data-role="main" class="display-flex flex-column" style="overflow: auto;">
-
-
-			<form class="cat-page">
-			<p class="title-cat">NAME</p>
-			<p class="info-cat">Figi</p>
-
-			<p class="title-cat">Age</p>
-			<p class="info-cat">2 years-old</p>
-			
-			
-			<p class="title-cat">Spay or Neuter</p>
-			<p class="info-cat">Spay</p>
-
-			<p class="title-cat">Description</p>
-			<p class="info-cat">Very Playful, likes to climb trees</p>
-
-			
-			
-		</form>
-
-		
-		<div class="cat-map-location"><img src="img/cat-map-location.png"></div>
-			
-		</div>
- 
-		<footer data-role="footer" data-template="#footer-template"></footer>
-</section>
-
-<!-- Animal profile page for FAKE PROFILES ARTEMIS-->
-
-<section data-role="page" id="animal-profile-page-artemis">
-		<header data-role="header">
-			<h1>Cat's Profile</h1>
-			<ul>
-				<li><a href="#" data-rel="back">Back</a></li>
-				<li class="flex-stretch"></li>
-				<li><a href="#animal-edit-page">Edit</a></li>
-			</ul>
-		</header>
-
-		<div class="photo-profiles">
-						<img src="img/cat-map-artemis.png" alt="">
-							<div class="edit-profile"><a href="#" style="text-align: center">Edit Photo</a></div>
-					</div>
-
-		<div data-role="main" class="display-flex flex-column" style="overflow: auto;">
-
-
-			<form class="cat-page">
-			<p class="title-cat">NAME</p>
-			<p class="info-cat">Artemis</p>
-
-			<p class="title-cat">Age</p>
-			<p class="info-cat">21 years-old</p>
-			
-			
-			<p class="title-cat">Spay or Neuter</p>
-			<p class="info-cat">Neuter</p>
-
-			<p class="title-cat">Description</p>
-			<p class="info-cat">Oldest cat in the neighborhood <3</p>
-
-			
-			
-		</form>
-
-		
-		<div class="cat-map-location"><img src="img/cat-map-location.png"></div>
-			
-		</div>
- 
-		<footer data-role="footer" data-template="#footer-template"></footer>
-</section>
-
-
-<!-- Animal profile page for FAKE PROFILES JULIETTE-->
-
-<section data-role="page" id="animal-profile-page-juliette">
-		<header data-role="header">
-			<h1>Cat's Profile</h1>
-			<ul>
-				<li><a href="#" data-rel="back">Back</a></li>
-				<li class="flex-stretch"></li>
-				<li><a href="#animal-edit-page">Edit</a></li>
-			</ul>
-		</header>
-
-		<div class="photo-profiles">
-						<img src="img/cat-map-black-white.png" alt="">
-							<div class="edit-profile"><a href="#" style="text-align: center">Edit Photo</a></div>
-					</div>
-
-		<div data-role="main" class="display-flex flex-column" style="overflow: auto;">
-
-
-			<form class="cat-page">
-			<p class="title-cat">NAME</p>
-			<p class="info-cat">Juliette</p>
-
-			<p class="title-cat">Age</p>
-			<p class="info-cat">3 years-old</p>
-			
-			
-			<p class="title-cat">Spay or Neuter</p>
-			<p class="info-cat">Spay</p>
-
-			<p class="title-cat">Description</p>
-			<p class="info-cat">Loves to talk to humans :)</p>
-
-			
-			
-		</form>
-
-		
-		<div class="cat-map-location"><img src="img/cat-map-location.png"></div>
-			
-		</div>
- 
-		<footer data-role="footer" data-template="#footer-template"></footer>
-</section>
-
-
-
 
 
 
@@ -517,35 +320,10 @@
 	<!-- User page-->
 	<section data-role="page" id="user-profile-page">
 		
-			<div data-role="main" class="display-flex flex-column">
+		<div data-role="main" class="display-flex flex-column"style="overflow: auto;">
 			<div class="flex-stretch"></div>
-			<div style="text-align:center;margin-bottom:10vmin">
-				<img src="img/profile-pic.png" alt="">
-				<div class="edit-profile"><a href="#user-edit-page" style="text-align: center">Edit Profile</a></div>
-				
-				<div class="profile-name" style="margin-top: 15px;">Tiffany</div>
-			</div>
 			
-
-
-			<form class="user-page">
-			<p class="title-user">NAME</p>
-			<p class="user-info">Tiffany Simmons</p>
-
-			<p class="title-user">USERNAME</p>
-			<p class="user-info">@kittyfany</p>
-			
-			
-			<p class="title-user">EMAIL</p>
-			<p class="user-info">fanytiffany@gmail.com</p>
-
-			<a href="#" class="js-logout">Logout</a>
-			
-		</form>
-
-
-		<div class="flex-stretch"></div> <!-- makes photo go up-->
-	</div>
+		</div>
 
 		<footer data-role="footer" data-template="#footer-template"></footer>
 	</section>
