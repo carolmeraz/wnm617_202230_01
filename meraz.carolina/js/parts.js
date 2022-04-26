@@ -61,7 +61,7 @@ const makeAnimalProfileDescription = o => `
 	</div>
 </div>
 
-<i class="material-icons">&#xe0c8; Location</i>
+
 
 <form class="cat-page">
 	
@@ -82,9 +82,10 @@ const makeAnimalProfileDescription = o => `
 	<p class="title-cat">Description</p>
 	<p class="info-cat">${o.description}</p>
 
-			
-			
+					
 </form>
+
+<div class="map-cat-location">Check Locations<div class="map"></div></div>
 
 </div>
 

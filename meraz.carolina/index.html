@@ -1,3 +1,4 @@
+<!--  AIzaSyB_inAMne2mIKSNI_CgRRdKxx7RZh0D3mI -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +21,17 @@
 	<script src="js/functions.js"></script>
 	<script src="js/pages.js"></script>
 	<script src="js/parts.js"></script>
+	<script src="js/maps.js"></script>
 
 <!-- this library wants to be after files -->
 	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 
+<!-- map script -->
+	<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_inAMne2mIKSNI_CgRRdKxx7RZh0D3mI"
+      defer
+    ></script>
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,500&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;1,400&display=swap');
@@ -127,13 +133,16 @@
 
 	<!-- Map/recent page-->
 	<section data-role="page" id="recent-page">
-		<div data-role="main" class="map-placeholder">Map
-		
-			<img src="img/cat-map.png" alt="cat" style="width:60px; height: 60px; margin-left:100px; margin-top:150px;">
-			<img src="img/cat-map.png" alt="cat" style="width:60px; height: 60px; margin-left:130px; margin-top:200px;">
-			<img src="img/cat-map.png" alt="cat" style="width:60px; height: 60px; margin-left:200px; margin-top:160px;">
-
-			</div>
+		<div data-role="main">
+			
+		 <div class="map"></div>
+		 <div class="recent-search">
+            
+            <div class="flex-none" style="line-height:3rem;padding:0 0.5em">
+               <img src="img/cat-map.png" style="vertical-align: middle;" alt="" class="icon">
+            </div>
+         </div>
+      </div>
 		
 		<footer data-role="footer" data-template="#footer-template"></footer>
 	</section>
@@ -193,12 +202,9 @@
 		<div data-role="main" style="overflow: auto;">
 			<div class="animal-profile-description"></div>
 		</div>
-		 <div class="animal-profile-nav">
-            <div class="active">Locations</div>
-            <div>About</div>
-         </div>
+		 
  
-		<footer data-role="footer" data-template="#footer-template"></footer>
+		
 </section>
 
 

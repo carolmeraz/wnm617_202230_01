@@ -75,14 +75,10 @@ $(() => {
    });
 
 
-   [,"#recent-page","list-page","user-profile-page"].forEach(p=>{
-      if(window.location.hash === p){
-
-         $(`.nav-icon-set li:nth-child"(${i})`).addClass("active");
-
+   [,"#recent-page","#list-page","#user-profile-page"].forEach((p,i)=>{
+      if(window.location.hash === p) {
+         $(`.nav-icon-set li:nth-child(${i})`).addClass("active");
       }
    });
-
-
 
 });

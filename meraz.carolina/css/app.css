@@ -144,6 +144,18 @@ a:hover {
 	padding: 1em;
 }
 
+#recent-search {
+   box-shadow: 0.1em 0.2em 0.4em rgba(0,0,0,0.3);
+}
+
+
+.recent-search {
+   margin: 1em;
+   display: flex;
+   position: relative;
+}
+
+
 
 
 /*Page layouts*/
@@ -215,11 +227,11 @@ a:hover {
 }
 
 
-.map-placeholder {
+/*.map-placeholder {
 	background-image: url(../img/map.png);
 	background-position: center;
 	background-size: cover;
-}
+}*/
 
 
 
@@ -405,11 +417,29 @@ a:hover {
 }
 
 
-.material-icons {
-	text-align: center;
-	font-size:24px;
-	color:var(--color-neutral-darkest);
+
+/* MAP recent page*/
+.map {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
 }
+
+.icon {
+   width: 2rem;
+   height: 2rem;
+   vertical-align: middle;
+}
+
+
+
+
+
+
+
+
 
 
 
