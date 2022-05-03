@@ -24,7 +24,7 @@ const makeUserProfilePage = o => `
 	<div class="img-user">
 		<img src="${o.img}" alt="">
 	</div>
-		<div class="edit-profile"><a href="#user-edit-page" style="text-align: center">Edit Profile</a></div>
+		
 				
 		<div class="profile-name" style="margin-top: 15px;">${o.name}</div>
 </div>
@@ -42,13 +42,11 @@ const makeUserProfilePage = o => `
 				<p class="user-info">${o.email}</p>
 				<br>
 
-				<a href="#" class="js-logout">Logout</a>
+				<a href="#user-settings-page" class="js-logout">Settings</a>
 			
 			</form>
 
 
-		
-	</div>
 
 `;
 
@@ -85,11 +83,131 @@ const makeAnimalProfileDescription = o => `
 					
 </form>
 
-<div class="map-cat-location">Check Locations<div class="map"></div></div>
-
-</div>
 
 `;
+
+
+
+
+const FormControlInput = ({namespace,name,displayname,type,placeholder,value=""}) => {
+   return `<div class="form-control">
+      <label class="form-label" for="#${namespace}-${name}">${displayname}</label>
+      <input data-role="none" class="form-input" type="${type}" placeholder="${placeholder}" id="${namespace}-${name}" value="${value}">
+   </div>`;
+}
+const FormControlTextarea = ({namespace,name,displayname,placeholder,value=""}) => {
+   return `<div class="form-control">
+      <label class="form-label" for="#${namespace}-${name}">${displayname}</label>
+      <textarea data-role="none" class="form-input" placeholder="${placeholder}" id="${namespace}-${name}">${value}</textarea>
+   </div>`;
+}
+
+
+
+
+const makeAnimalForm = (animal,namespace = "animal-add") => {
+return `
+${FormControlInput({
+   namespace,
+   name:"name",
+   displayname:"Name",
+   type:"text",
+   placeholder:"Type a Name",
+   value:animal.name,
+})}
+${FormControlInput({
+   namespace,
+   name:"age",
+   displayname:"Age",
+   type:"text",
+   placeholder:"Type Age",
+   value:animal.age,
+})}
+${FormControlInput({
+   namespace,
+   name:"type",
+   displayname:"Type",
+   type:"text",
+   placeholder:"Spay or Neuter",
+   value:animal.type,
+})}
+
+${FormControlInput({
+   namespace,
+   name:"favoriteFood",
+   displayname:"Favorite Food",
+   type:"text",
+   placeholder:"Type Favorite Food",
+   value:animal.favoriteFood,
+})}
+${FormControlTextarea({
+   namespace,
+   name:"description",
+   displayname:"Description",
+   placeholder:"Type a Description",
+   value:animal.description,
+})}
+`;
+}
+
+
+
+const makeUserForm = (user,namespace = "user-edit") => {
+return `
+${FormControlInput({
+   namespace,
+   name:"name",
+   displayname:"Name",
+   type:"text",
+   placeholder:"Type a Name",
+   value:user.name,
+})}
+${FormControlInput({
+   namespace,
+   name:"username",
+   displayname:"Username",
+   type:"text",
+   placeholder:"Type a Username",
+   value:user.username,
+})}
+${FormControlInput({
+   namespace,
+   name:"email",
+   displayname:"Email",
+   type:"text",
+   placeholder:"Type an Email",
+   value:user.email,
+})}
+`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -21,6 +21,7 @@
 	<script src="js/functions.js"></script>
 	<script src="js/pages.js"></script>
 	<script src="js/parts.js"></script>
+	<script src="js/forms.js"></script>
 	<script src="js/maps.js"></script>
 
 <!-- this library wants to be after files -->
@@ -136,12 +137,19 @@
 		<div data-role="main">
 			
 		 <div class="map"></div>
-		 <div class="recent-search">
-            
+		 
+		 
+		 <!--<div class="recent-search">
+            <form class="hotdog flex-stretch" data-ajax="false" id="recent-search">
+               <input type="search" data-role="none" placeholder="Search...">
+            </form>
             <div class="flex-none" style="line-height:3rem;padding:0 0.5em">
-               <img src="img/cat-map.png" style="vertical-align: middle;" alt="" class="icon">
+               
             </div>
-         </div>
+         </div>-->
+
+         <a href="#choose-animal-page" class="floater bottom right circle-button">&plus;</a>
+      
       </div>
 		
 		<footer data-role="footer" data-template="#footer-template"></footer>
@@ -163,7 +171,7 @@
 			<h1>Cats</h1>
 			<ul>
 				<li class="flex-stretch"></li>
-				<a href="#add-cat-page">Add</a>
+				<a href="#animal-add-page">Add</a>
 			</ul>
 
 		</header>
@@ -189,6 +197,7 @@
 
 <!-- Animal profile page-->
 
+
 <section data-role="page" id="animal-profile-page">
 		<header data-role="header">
 			<h1>Cat's Profile</h1>
@@ -202,7 +211,42 @@
 		<div data-role="main" style="overflow: auto;">
 			<div class="animal-profile-description"></div>
 		</div>
+
+			<div class="animal-profile-nav">
+				<div><a href="#animal-profile-page">About</a></div>
+				<div><a href="#animal-profile-location-page">Map</a></div>
+		</div>
+
+				
+
+		</section>
 		 
+
+
+
+<!-- Animal profile MAP LOCATION page-->
+
+<section data-role="page" id="animal-profile-location-page">
+		<header data-role="header">
+			<h1>Recent Locations</h1>
+			<ul>
+				<li><a href="#" data-rel="back">Back</a></li>
+				<li class="flex-stretch"></li>
+				<li><a href="#animal-edit-page"></a></li>
+			</ul>
+		</header>
+
+		<div data-role="main">
+			
+		 <div class="map"></div>
+		 
+      </div>
+
+		<div class="animal-profile-nav">
+				<div><a href="#animal-profile-page">About</a></div>
+				<div><a href="#animal-profile-location-page">Map</a></div>
+		</div>
+
  
 		
 </section>
@@ -217,7 +261,7 @@
 			<ul>
 				<li><a href="#" data-rel="back">Back</a></li>
 				<li class="flex-stretch"></li>
-				<li><a href="#list-page">Save</a></li>
+				<li><a href="#" class="js-submit-animal-edit">Save</a></li>	
 			</ul>
 
 		</header>
@@ -249,7 +293,7 @@
 				</div>
 
 			</form>
-			<div class="cat-map-location"><img src="img/cat-map-location.png"></div>
+			
 
 		</div>
 	
@@ -267,13 +311,13 @@
 	<!-- Animal Add page-->
 
 
-<section data-role="page" id="add-cat-page">
+<section data-role="page" id="animal-add-page">
 		<header data-role="header">
 			<h1>Add Cat</h1>
 			<ul>
 				<li><a href="#" data-rel="back">Back</a></li>
 				<li class="flex-stretch"></li>
-				<li><a href="#list-page">Save</a></li>
+				<li><a href="#" data-rel="back" class="js-submit-animal-add">Save</a></li>
 			</ul>
 
 		</header>
@@ -286,31 +330,7 @@
 					</div>
 				
 
-			<form id="add-cat-form" class="form">
-				<div class="form-control">
-					<label for="cat-name" class="form-label">Cat Name</label>
-					<input type="text" id="add-cat-name" data-role="none" class="form-input" placeholder="Type Cat Name">
-				</div>
-				<div class="form-control">
-					<label for="cat-age" class="form-label">Age</label>
-					<input type="text" id="add-cat-age-" data-role="none" class="form-input" placeholder="Type Cat's Age">
-				</div>
-
-				<div class="form-control">
-					<label for="spay-neuter" class="form-label">Spay or Neuter</label>
-					<input type="text" id="add-spay-neuter" data-role="none" class="form-input" placeholder="Type Yes or No">
-				</div>
-
-				<div class="form-control">
-					<label for="cat-description" class="form-label">Description</label>
-					<input type="text" id="add-cat-description" data-role="none" class="form-input" placeholder="Type Description">
-				</div>
-
-			</form>
-			
-			<div class="cat-map-location"><img src="img/cat-map-location.png"></div>
-
-			
+			<form id="animal-add-form" class="overscroll" data-ajax="false" style="padding:1em"></form>	
 
 		</div>
 	
@@ -336,8 +356,22 @@
 
 
 
-
-
+<!-- User Settings page-->
+<section data-role="page" id="user-settings-page">
+      <header data-role="header">
+         <h1>User Settings</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <ul>
+            <li><a href="#user-edit-page">Edit User</a></li>
+            <li><a href="#user-password-page">Edit Password</a></li>
+            <li><a href="#" class="js-logout">Logout</a></li>
+         </ul>
+      </div>
+   </section>
 
 
 
@@ -346,18 +380,17 @@
 
 	<section data-role="page" id="user-edit-page">
 		<header data-role="header">
-			<h1>Edit Profile</h1>
+			<h1>Edit User</h1>
 			<ul>
-				<li><a href="#" data-rel="back">Back</a></li>
-				<li class="flex-stretch"></li>
-				<li><a href="#list-page">Save</a></li>
-			</ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#user-profile-page" class="js-submit-user-edit">Save</a></li>
+         </ul>
 
 		</header>
 
-		<div data-role="main" class="display-flex flex-column">
-			<div class="flex-stretch"></div>
-			<div style="text-align:center;margin-bottom:20vmin">
+		<div data-role="main" class="display-flex flex-column" style="overflow:auto">
+			<div class="photo-profiles">
 				<img src="img/profile-pic.png" alt="">
 				<div class="edit-profile"><a href="#user-edit-page" style="text-align: center">Upload Photo</a></div>
 				
@@ -367,27 +400,8 @@
 		
 
 
-			<form id="edit-name-form" class="form">
-				<div class="form-control">
-					<label for="edit-name-page" class="form-label">New Name</label>
-					<input type="text" id="edit-name" data-role="none" class="form-input" placeholder="Type New Name">
-				</div>
-				<div class="form-control">
-					<label for="edit-username-page" class="form-label">New Username</label>
-					<input type="text" id="edit-username" data-role="none" class="form-input" placeholder="Type New Username">
-				</div>
-
-
-				<div class="form-control">
-					<label for="edit-email-page" class="form-label">New Email</label>
-					<input type="text" id="edit-email" data-role="none" class="form-input" placeholder="Type New Email">
-				</div>
-			
-				<div class="form-control">
-					<label for="edit-password-page" class="form-label">New Password</label>
-					<input type="text" id="edit-password" data-role="none" class="form-input" placeholder="Type New Password">
-				</div>
-			</form>
+			 <form id="user-edit-form" class="overscroll" data-ajax="false" style="padding:1em">
+         </form>
 
 			<div class="flex-stretch"></div> <!-- makes photo go up-->
 		</div>
@@ -400,6 +414,43 @@
 
 
 
+
+<!--User Password Page -->
+<section data-role="page" id="user-password-page">
+      <header data-role="header">
+         <h1>Edit User Password</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="user-password-form" class="overscroll fill-parent display-flex flex-column" data-ajax="false" style="padding:1em">
+            <div>
+               <div class="form-control">
+                  <label for="user-password-new" class="form-label">New Password</label>
+                  <input class="form-input" type="password" id="user-password-new" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="user-password-repeat" class="form-label">Repeat Password</label>
+                  <input class="form-input" type="password" id="user-password-repeat" data-role="none">
+               </div>
+            </div>
+            <div class="flex-stretch"></div>
+            <div>
+               <button class="form-button" type="submit">Submit</button>
+            </div>
+         </form>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
+<!-- FOOTER template-->
 	
 
 <script type="text/template" id="footer-template">
@@ -424,5 +475,7 @@
 
 
 	
+
+
 </body>
 </html>

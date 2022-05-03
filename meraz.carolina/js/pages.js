@@ -68,12 +68,44 @@ const AnimalProfilePage = async() => {
    })
    console.log(locations)
 
-   let map_el = await makeMap("#animal-profile-page .map");
+   let map_el = await makeMap("#animal-profile-location-page .map");
    makeMarkers(map_el,locations)
 }
 
 
+const UserEditPage = async() => {
+   let {result:users} = await query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   })
+   let [user] = users;
 
+   $("#user-edit-form").html(makeUserForm(user,"user-edit"))
+}
+
+
+
+const AnimalEditPage = async() => {
+   let {result:animals} = await query({
+      type:'animal_by_id',
+      params:[sessionStorage.animalId]
+   })
+   let [animal] = animals;
+
+   $("#animal-edit-form").html(makeAnimalForm(animal,"animal-edit"))
+}
+
+
+
+const AnimalAddPage = async() => {
+   let {result:animals} = await query({
+      type:'animal_by_id',
+      params:[sessionStorage.animalId]
+   })
+   let [animal] = animals;
+
+   $("#animal-add-form").html(makeAnimalForm({},"animal-add"))
+}
 
 
 
