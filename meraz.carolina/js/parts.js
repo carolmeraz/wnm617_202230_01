@@ -56,7 +56,9 @@ const makeAnimalProfileDescription = o => `
 <div style="text-align:center;margin-bottom:10vmin">
 	<div class="img-cat">
 		<img src="${o.img}" alt="">
+
 	</div>
+	
 </div>
 
 
@@ -117,11 +119,11 @@ ${FormControlInput({
 })}
 ${FormControlInput({
    namespace,
-   name:"age",
-   displayname:"Age",
+   name:"cat_age",
+   displayname:"Cat Age",
    type:"text",
    placeholder:"Type Age",
-   value:animal.age,
+   value:animal.cat_age,
 })}
 ${FormControlInput({
    namespace,
@@ -162,6 +164,7 @@ ${FormControlInput({
    placeholder:"Type a Name",
    value:user.name,
 })}
+
 ${FormControlInput({
    namespace,
    name:"username",

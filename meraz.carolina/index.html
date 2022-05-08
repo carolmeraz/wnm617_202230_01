@@ -88,27 +88,31 @@
 				<div class="logo-text" style="margin-top: 15px;">Whiskers</div>
 			</div>
 			<form id="signup-form" class="form" data-ajax="false">
-				<div class="form-control">
-					<label for="signup-name" class="form-label">Name</label>
-					<input type="text" id="signup-name" data-role="none" class="form-input" placeholder="Type your Name">
-				</div>
+				
 				<div class="form-control">
 					<label for="signup-username" class="form-label">Username</label>
 					<input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type your Username">
+				</div>
+
+				<div class="form-control">
+					<label for="signup-email" class="form-label">Email</label>
+					<input type="email" id="signup-email" data-role="none" class="form-input" placeholder="Type your Email">
 				</div>
 				<div class="form-control">
 					<label for="signup-password" class="form-label">Password</label>
 					<input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type your Password">
 				</div>
 
-
 				<div class="form-control">
-					<label for="signup-email" class="form-label">Email</label>
-					<input type="email" id="signup-email" data-role="none" class="form-input" placeholder="Type your Email">
-				</div>
+               <label for="signup-password2" class="form-label">Confirm Password</label>
+               <input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Type your Password again">
+            </div>
+
+
 			<!--<input type="submit" data-role="none"> -->
 				<div class="form-control">
-					<a href="#recent-page" class="form-button">Sign Up</a>
+					<button type="submit" class="form-button" data-role="none">Sign Up</button>
+					<!--<a href="#recent-page" class="form-button">Sign Up</a>-->
 				</div>
 					
 				<div class="form-control" style="text-align: center;font-size: 0.8em;">
@@ -240,6 +244,10 @@
 			
 		 <div class="map"></div>
 		 
+	
+
+      <a href="#choose-location-page" class="floater bottom right circle-button">&plus;</a>
+      
       </div>
 
 		<div class="animal-profile-nav">
@@ -272,27 +280,11 @@
 							<div class="edit-profile"><a href="#" style="text-align: center">Upload Photo</a></div>
 					</div>
 
-			<form id="edit-animal-form" class="form">
-				<div class="form-control">
-					<label for="edit-cat-page" class="form-label">New Cat Name</label>
-					<input type="text" id="edit--cat-name" data-role="none" class="form-input" placeholder="Type New Cat Name">
-				</div>
-				<div class="form-control">
-					<label for="edit-cat-age-page" class="form-label">New Cat Age</label>
-					<input type="text" id="edit-cat-age" data-role="none" class="form-input" placeholder="Type New cat Age">
-				</div>
+			 <form id="animal-edit-form" data-ajax="false" style="padding:1em">
+         </form>
+				
 
-				<div class="form-control">
-					<label for="edit-spay-neuter-page" class="form-label">Spay or Neuter</label>
-					<input type="text" id="edit-spay-neuter" data-role="none" class="form-input" placeholder="Type Yes or No">
-				</div>
-
-				<div class="form-control">
-					<label for="edit-cat-description-page" class="form-label">New Description</label>
-					<input type="text" id="edit-cat-description" data-role="none" class="form-input" placeholder="Type New Description">
-				</div>
-
-			</form>
+			
 			
 
 		</div>
@@ -313,12 +305,12 @@
 
 <section data-role="page" id="animal-add-page">
 		<header data-role="header">
-			<h1>Add Cat</h1>
+			<h1>New Cat</h1>
 			<ul>
-				<li><a href="#" data-rel="back">Back</a></li>
-				<li class="flex-stretch"></li>
-				<li><a href="#" data-rel="back" class="js-submit-animal-add">Save</a></li>
-			</ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-animal-add">Save</a></li>
+         </ul>
 
 		</header>
 
@@ -338,6 +330,64 @@
 	</section>
 
 
+
+
+
+
+   <!-- CHOOSE ANIMAL page-->
+  <section data-role="page" id="choose-animal-page">
+      <header data-role="header">
+         <h1>Choose Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-location-page">Next</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="location-animal">
+      </div>
+   </section>
+
+
+
+
+      <!-- CHOOSE LOCATION page-->
+
+     <section data-role="page" id="choose-location-page">
+      <header data-role="header">
+         <h1>Choose Location</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-description-page">Next</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="location-lat">
+         <input type="hidden" id="location-lng">
+         <div class="map"></div>
+      </div>
+   </section>
+
+
+
+
+   <!-- CHOOSE description page-->
+
+  <section data-role="page" id="choose-description-page">
+      <header data-role="header">
+         <h1>Describe The Cat</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-location-add">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" style="padding:1em">
+         <textarea id="location-description" class="form-input" data-role="none"></textarea>
+      </div>
+   </section>
 
 
 
@@ -384,7 +434,7 @@
 			<ul>
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#user-profile-page" class="js-submit-user-edit">Save</a></li>
+            <li><a href="#" class="js-submit-user-edit">Save</a></li>
          </ul>
 
 		</header>
@@ -392,13 +442,10 @@
 		<div data-role="main" class="display-flex flex-column" style="overflow:auto">
 			<div class="photo-profiles">
 				<img src="img/profile-pic.png" alt="">
-				<div class="edit-profile"><a href="#user-edit-page" style="text-align: center">Upload Photo</a></div>
+				<div class="edit-profile"><a href="#" style="text-align: center">Upload Photo</a></div>
 				
 			</div>
 				
-		
-		
-
 
 			 <form id="user-edit-form" class="overscroll" data-ajax="false" style="padding:1em">
          </form>
@@ -431,7 +478,7 @@
                   <input class="form-input" type="password" id="user-password-new" data-role="none">
                </div>
                <div class="form-control">
-                  <label for="user-password-repeat" class="form-label">Repeat Password</label>
+                  <label for="user-password-repeat" class="form-label">Repeat New Password</label>
                   <input class="form-input" type="password" id="user-password-repeat" data-role="none">
                </div>
             </div>

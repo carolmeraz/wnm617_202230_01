@@ -14,12 +14,15 @@ $(() => {
       switch(ui.toPage[0].id) {
          case "recent-page": RecentPage(); break;
          case "list-page": ListPage(); break;
+         
          case "user-profile-page": UserProfilePage(); break;
-          case "user-edit-page": UserEditPage(); break;
+         case "user-edit-page": UserEditPage(); break;
+         
          case "animal-profile-page": AnimalProfilePage(); break;
          case "animal-edit-page": AnimalEditPage(); break;
          case "animal-add-page": AnimalAddPage(); break;
 
+         case "choose-location-page": ChooseLocationPage(); break;
       }
    })
 
@@ -30,10 +33,28 @@ $(() => {
       checkLoginForm();
    })
 
+ .on("submit", "#signup-form", function(e) {
+      e.preventDefault();
+      submitUserSignup();
+   })
+
+
+
+
  // FORM SUBMISSION CLICKS
    .on("click", ".js-submit-animal-add", function() {
       submitAnimalAdd();
    })
+   .on("click", ".js-submit-animal-edit", function() {
+      submitAnimalEdit();
+   })
+   .on("click", ".js-submit-user-edit", function() {
+      submitUserEdit();
+   })
+   .on("click", ".js-submit-location-add", function() {
+      submitLocationAdd();
+   })
+
 
 
    // CLICKS
@@ -53,6 +74,11 @@ $(() => {
       }
    })
 
+
+
+.on("click",".js-animal-delete", function(e) {
+      submitDeleteAnimal();
+   })
 
 
    // ACTIVATE TOOLS
