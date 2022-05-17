@@ -42,7 +42,7 @@ const makeUserProfilePage = o => `
 				<p class="user-info">${o.email}</p>
 				<br>
 
-				<a href="#user-settings-page" class="js-logout">Settings</a>
+				<a href="#user-settings-page">Settings</a>
 			
 			</form>
 
@@ -173,6 +173,7 @@ ${FormControlInput({
    placeholder:"Type a Username",
    value:user.username,
 })}
+
 ${FormControlInput({
    namespace,
    name:"email",

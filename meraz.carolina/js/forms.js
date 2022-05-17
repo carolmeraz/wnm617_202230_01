@@ -57,7 +57,7 @@ const submitDeleteAnimal = async () => {
 }
 
 const submitUserSignup = async () => {
-   
+   let name = $("#signup-name").val();
    let username = $("#signup-username").val();
    let email = $("#signup-email").val();
    let password = $("#signup-password").val();
@@ -66,10 +66,10 @@ const submitUserSignup = async () => {
    if(password2!=password) {
       throw("Passwords don't match");
    } else
-   if(username!="" && email!="" && password!="") {
+   if(name!="" && username!="" && email!="" && password!="") {
       let {id,error} = await query({
          type: 'insert_user',
-         params: [username,email,password]
+         params: [name,username,email,password]
       });
 
       if(error) throw(error);

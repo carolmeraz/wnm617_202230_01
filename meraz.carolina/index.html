@@ -82,13 +82,18 @@
 <section data-role="page" id="signup-page" class="signin-background-color">
 		<div data-role="main" class="display-flex flex-column">
 			<div class="flex-stretch"></div>
-			<div style="text-align:center;margin-bottom:10vmin;">
+			<div style="text-align:center;margin-bottom:1vmin;">
 				<img src="img/cat-logo-app-2.png" alt="cat" style="width:65vmin; height: 50vmin">
 				
 				<div class="logo-text" style="margin-top: 15px;">Whiskers</div>
 			</div>
 			<form id="signup-form" class="form" data-ajax="false">
-				
+
+				<div class="form-control">
+
+					<label for="signup-name" class="form-label">Name</label>
+					<input type="text" id="signup-name" data-role="none" class="form-input" placeholder="Type your Name">
+				</div>
 				<div class="form-control">
 					<label for="signup-username" class="form-label">Username</label>
 					<input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type your Username">
@@ -246,7 +251,7 @@
 		 
 	
 
-      <a href="#choose-location-page" class="floater bottom right circle-button">&plus;</a>
+     <a href="#choose-location-page" class="floater bottom right circle-button">&plus;</a>
       
       </div>
 
@@ -277,7 +282,7 @@
 			
 			<div class="photo-profiles">
 						<img src="img/cat-map-small.png" alt="" >
-							<div class="edit-profile"><a href="#" style="text-align: center">Upload Photo</a></div>
+							<div class="edit-profile"><a href="#animal-edit-photo-page" style="text-align: center">Upload Photo</a></div>
 					</div>
 
 			 <form id="animal-edit-form" data-ajax="false" style="padding:1em">
@@ -295,7 +300,24 @@
 	</section>
 
 
+<!-- Animal PHOTO upload-->
 
+<section data-role="page" id="animal-edit-photo-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-animal-upload">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="animal-edit-photo-image">
+         <label class="imagepicker replace">
+            <input type='file' id="animal-edit-photo-input" data-role="none">
+         </label>
+      </div>
+   </section>
 
 
 
@@ -442,7 +464,7 @@
 		<div data-role="main" class="display-flex flex-column" style="overflow:auto">
 			<div class="photo-profiles">
 				<img src="img/profile-pic.png" alt="">
-				<div class="edit-profile"><a href="#" style="text-align: center">Upload Photo</a></div>
+				<div class="edit-profile"><a href="#user-edit-photo-page" style="text-align: center">Upload Photo</a></div>
 				
 			</div>
 				
@@ -491,6 +513,24 @@
    </section>
 
 
+<!--User PHOTO upload-->
+
+<section data-role="page" id="user-edit-photo-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-user-upload">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="user-edit-photo-image">
+         <label class="imagepicker replace">
+            <input type='file' id="user-edit-photo-input" data-role="none">
+         </label>
+      </div>
+   </section>
 
 
 
