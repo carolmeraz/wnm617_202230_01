@@ -155,4 +155,14 @@ const AnimalEditPhotoPage = async () => {
 
 
 
+const ChooseLocationPage = async () => {
+   let map_el = await makeMap("#choose-location-page .map");
+
+   map_el.data("map").addListener("click",function(e){
+      console.log(e)
+      $("#location-lat").val(e.latLng.lat())
+      $("#location-lng").val(e.latLng.lng())
+      makeMarkers(map_el,[{lat:e.latLng.lat(),lng:e.latLng.lng(),icon:'img/cat-map-barbie.png'}])
+   })
+}
 

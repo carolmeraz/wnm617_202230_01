@@ -42,8 +42,7 @@ const makeUserProfilePage = o => `
 				<p class="user-info">${o.email}</p>
 				<br>
 
-				<a href="#user-settings-page">Settings</a>
-			
+				
 			</form>
 
 
@@ -65,7 +64,7 @@ const makeAnimalProfileDescription = o => `
 
 <form class="cat-page">
 	
-	<p class="title-cat">NAME</p>
+	<p class="title-cat">Name</p>
 	<p class="info-cat">${o.name}</p>
 
 	<p class="title-cat">Age</p>

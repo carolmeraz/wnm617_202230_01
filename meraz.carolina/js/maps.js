@@ -44,7 +44,7 @@ const makeMarkers = (map_el, map_locs=[]) => {
    });
 
       map_el.data({markers});
-   setTimeout(()=>{ setMapBounds(map_el,map_locs); }, 150);
+   setTimeout(()=>{ setMapBounds(map_el,map_locs); }, 250);
 }
 
 

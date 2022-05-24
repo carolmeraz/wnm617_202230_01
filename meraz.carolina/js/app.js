@@ -118,10 +118,13 @@ $(() => {
          throw("No id detected")
       }
    })
+   .on("click",".js-location-choose-animal", function(e) {
+      $("#location-animal").val(sessionStorage.animalId)
+   })
 
 
 
-.on("click",".js-animal-delete", function(e) {
+   .on("click",".js-animal-delete", function(e) {
       submitDeleteAnimal();
    })
 

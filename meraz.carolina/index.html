@@ -38,6 +38,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,500&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;1,400&display=swap');
 </style>
 
+
+
+<script src="https://kit.fontawesome.com/460073033e.js" crossorigin="anonymous"></script>
+
 	
 
 
@@ -176,14 +180,14 @@
 
 
 	<section data-role="page" id="list-page">
-		<header data-role="header">
+		<!--<header data-role="header">
 			<h1>Cats</h1>
 			<ul>
 				<li class="flex-stretch"></li>
 				<a href="#animal-add-page">Add</a>
 			</ul>
 
-		</header>
+		</header>-->
 
 		<form id="cat-search-bar-page" class="form" data-ajax="false" style="padding: 1em;">
 		<div class="form-control">
@@ -192,6 +196,17 @@
 				</div>
 			</form>
 		<div data-role="main" style="overflow: auto;">
+		
+				<div class="add-cat-image">
+					
+			   <a href="#animal-add-page"><img src="img/cat-map-bw.png" style="width:70px;">
+			   <br>Add Cat</a>
+			    
+			      
+			    
+			 </div>
+
+
 			<ul class="animal-list"></ul>			
 		</div>
 
@@ -211,7 +226,7 @@
 		<header data-role="header">
 			<h1>Cat's Profile</h1>
 			<ul>
-				<li><a href="#" data-rel="back">Back</a></li>
+				<li><a href="#list-page">Back</a></li>
 				<li class="flex-stretch"></li>
 				<li><a href="#animal-edit-page">Edit</a></li>
 			</ul>
@@ -251,7 +266,7 @@
 		 
 	
 
-     <a href="#choose-location-page" class="floater bottom right circle-button">&plus;</a>
+     <a href="#choose-location-page" class="floater bottom right circle-button js-location-choose-animal">&plus;</a>
       
       </div>
 
@@ -261,7 +276,7 @@
 		</div>
 
  
-		
+		 
 </section>
 
 
@@ -417,18 +432,51 @@
 
 	<!-- User page-->
 	<section data-role="page" id="user-profile-page">
+		<header data-role="header-settings">
+         
+         
+   
+           <p class="settings-icon"> <a href="#" data-activate="#settings-drawer"><i class="fa-solid fa-gear fa-xl"></i></a></p>
+			
+       
+      </header>
 		
 		<div data-role="main" class="display-flex flex-column"style="overflow: auto;">
 			<div class="flex-stretch"></div>
+
+
 			
 		</div>
 
+
 		<footer data-role="footer" data-template="#footer-template"></footer>
-	</section>
+
+<div class="modal" id="settings-drawer">
+	<div class="modal-back" data-deactivate="#settings-drawer"></div>
+	<div class="modal-drawer bottom">
+		<div class="modal-head">Settings</div>
+		<div class="modal-body">
+			<a href="#user-edit-page">
+				<p><i class="fa-solid fa-pen-to-square"></i> Edit User</p></a>
+			<a href="#user-password-page">
+				<p><i class="fa-solid fa-shield-cat"></i> Edit Password </p></a>
+			<br><a href="#" class="js-logout">
+				<p><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout </p></a>
 
 
 
-<!-- User Settings page-->
+		</div>
+	</div>
+</div>
+
+
+<!--User settings for parts goes at the bottom <a href="#" data-activate="#settings-drawer"><p class="settings"><i class="fa-solid fa-gear"></i> Settings</p></a>    -->
+			
+	</section> 
+
+
+
+<!-- User Settings page
 <section data-role="page" id="user-settings-page">
       <header data-role="header">
          <h1>User Settings</h1>
@@ -444,7 +492,7 @@
          </ul>
       </div>
    </section>
-
+-->
 
 
 
@@ -559,6 +607,15 @@
 	</ul>
 	
 </script>
+
+
+
+
+
+
+
+
+
 
 
 	
